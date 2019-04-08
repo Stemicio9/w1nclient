@@ -1,6 +1,14 @@
 {
-  "main": "main.js",
-  "android": {
-    "v8Flags": "--expose_gc"
-  }
+    "main": "main.js",
+    "android": {
+        "v8Flags": "--expose_gc"
+    },
+    "pluginsData": {
+        "kinvey-nativescript-sdk": {
+            "config": {
+                "appKey": "kid_rkIoKzWKV",
+                "appSecret": "95c95d363ebf4c0d8f9e4fee3deb7160"
+            }
+        }
+    }
 }

@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   constructor(private router: RouterExtensions, private activeRoute: ActivatedRoute) { }
 
   ngOnInit() {
-      console.log(this.activeRoute.toString());
+      console.log("ACTIVE ROUTE " + this.activeRoute.toString());
       this.router.navigate([{ outlets: { homeTab: ["home"], browseTab: ["browse"], searchTab: ["search"] , profiloTab: ["profilo"] } }], { relativeTo: this.activeRoute });
   }
 

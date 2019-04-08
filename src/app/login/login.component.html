@@ -2,13 +2,51 @@
     <Label class="action-bar-title" text="Home"></Label>
 </ActionBar>
 
-<StackLayout class="page left-gradient" orientation="vertical">
+<!-- <FlexboxLayout class="page left-gradient" flexDirection="column" alignContent="center" alignItems="center">  -->
 
-    <Image src="res://logowinb" stretch="fill"></Image>
-    <Label text="Email address"></Label>
+   <!-- <Image [src]="logowin" stretch="none"></Image> -->
+
+
+
+
+ <!--   <Label   text="Email address"></Label>  -->
+
  <!--   <TextField hint="Enter date" class="input input-border"> </TextField> -->
-    <Button text="Login" class="btn btn-facebook btn-block" [nsRouterLink]="['/dashboard/default']" ></Button>
+
+<FlexboxLayout id="layout" class="page" (tap)="clearTextfieldFocus($event)">
+    <Image [src]="logowin" stretch="none" marginTop="5%"></Image>
+    <StackLayout class="form hr-dark">
+        <StackLayout class="input-field">
+            <Label   text="Username" color="#008b8b" fontSize="20" ></Label>
+            <TextField #Textfield required hint="Inserisci email" [(ngModel)]="username" class="input"></TextField>
+
+        </StackLayout>
+
+        <StackLayout class="input-field">
+            <Label   text="Password" color="#008b8b" fontSize="20"></Label>
+            <TextField #Textfield required hint="Inserisci password" [(ngModel)]="password" class="input" ></TextField>
+
+        </StackLayout>
+
+        <Button text="Log In" class="btn btn-primary" (tap)="onSubmit()" )></Button>
+   </StackLayout>
+
+
+</FlexboxLayout>
+
+
+
+
+
+
+
+<!-- </FlexboxLayout> -->
     <!--
+
+
+    QUESTO FUNZIONA   <Button  text="Login" class="btn btn-facebook btn-block" [nsRouterLink]="['/dashboard/default']" ></Button>
+
+
         <input id="inputEmail" name="email" type="text" class="form-control" placeholder="Nome utente o indirizzo e-mail" required autofocus />
     <label for="inputPassword" class="sr-only">Email address</label>
                                 <input id="inputPassword" name="password"  type="password" class="form-control" placeholder="Password" required />
@@ -35,4 +73,7 @@
 -->
 
 
-</StackLayout>
+
+
+
+

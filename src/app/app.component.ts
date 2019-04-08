@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { isAndroid } from "tns-core-modules/platform";
+import { Kinvey } from "kinvey-nativescript-sdk";
 
 @Component({
     selector: "ns-app",
@@ -15,6 +16,11 @@ export class AppComponent implements OnInit {
 
     ngOnInit(): void {
         // Init your component properties here.
+        Kinvey.init({
+            appKey: 'admin',
+            appSecret: 'ciao'
+        });
+
     }
 
     getIconSource(icon: string): string {
